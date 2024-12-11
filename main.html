@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Jean - Personal Website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--<style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Content area styling */
+        #content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Utility classes for layout */
+        .section-content {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .section-content img {
+            width: 50%;
+            height: 50%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content .text {
+            width: 50%;
+        }
+
+        .text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .nav-active {
+            color: #4CAF50;
+        }
+
+        .form-container {
+            text-align: center;
+ 
+        }
+
+        .form-container input, .form-container textarea, .form-container button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-top: 0.5rem;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .image {
+            align-self: center; /* Optionally center the image horizontally */
+            margin-bottom: 20px; /* Optional spacing from the bottom */
+        }
+    </style>-->
+</head>
+
+<body>
+
+    <header>
+        <h1>Pura Jean</h1>
+        <p>"Law without justice is a wound without a cure" <br> William Scott Downey</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="loadContent('home')" class="nav-link">Home</a>
+        <a href="#" onclick="loadContent('autobiography')" class="nav-link">Autobiography</a>
+        <a href="#" onclick="loadContent('article')" class="nav-link">Article</a>
+        <a href="#" onclick="loadContent('blog')" class="nav-link">Blog</a>
+        <a href="#" onclick="loadContent('form')" class="nav-link">Form</a>
+    </nav>
+
+    <div id="content">
+        <!-- Dynamic content will be injected here -->
+        <div style="text-align: center;">
+            <h1>Welcome to My Website</h1>
+            <p>This is the home page. Use the navigation above to explore more.</p>
+            <div>
+                <h2>E2: COMPUTER</h2>
+                <p>Explore a world of innovation with my Projects and Lab Exercises for E2: Computer. Let's make technology fun and inspiring!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pura Jean. All rights reserved.</a></p>
+    </footer>
+
+    <script>
+        // Pages content
+        const pages = {
+            home: `
+                <div style="text-align: center;">
+                    <h1>Welcome to My Website</h1>
+                    <p>This is the home page. Use the navigation above to explore more.</p>
+                    <h2>E2: COMPUTER</h2>
+                    <p>Explore the world of creativity and innovation with my Projects and Lab Exercises for E2: Computer.</p>
+                </div>
+            `,
+            autobiography: `
+                <div class="section-content">
+                    <img src="purajean.jpg" alt="Pura Jean">
+                    <div class="text">
+                        <h1>My Autobiography</h1>
+                        <p><b>Jean Pura's</b> story begins with a deep fascination for human behavior and the complex forces that shape society. Born and raised in a quiet place in Naagtan, She's 19 years old and she is the second youngest in their family. She has a light-skinned color and 5’2 of height. She have a supportive and caring parents and have a eight loving siblings. She was always curious about the dynamics of justice, law, and order. From a young age, she found herself engage by true crime stories, documentaries, and discussions about criminal justice systems. However, it was her keen sense of empathy and her desire to make a difference in her community that eventually led her to pursue a career in criminology. Her academic journey started in high school, where she take the HUMSS ( Humanities and Social Science)strand that can be related to her course in college. Jean was not only a diligent student but also a good student who respect everyone in their school. Her teachers recognized her potential, encouraging her to consider criminology as a field of study. When Jean entered college, she enrolled in Sorsogon college of Criminology, where she quickly stood out for her academic excellence and dedication. Her studies were marked by a strong commitment to understanding the root causes of criminal behavior, the intricacies of the criminal justice system, and the impact of crime on both individuals and communities. She was drawn to courses on criminal law, forensic psychology, criminal investigations, and sociology. Jean also participated in Model Platoon organization that allowed her to gain practical experience, disciplinary and more knowledge for leadership. Throughout her college years, Jean was not only an outstanding scholar but also a quiet and good student. Jean Pura's journey in criminology is marked by an unwavering dedication to understand the causes of crime, promoting justice, and advocating for systemic reform. Her work continues to inspire those around her, as she strives to continue her course.</p>
+                    </div>
+                </div>
+            `,
+            article: `
+                <div class="section-content">
+                    <div class="text">
+                        <h1>What is Plagiarism?</h1>
+                        <p>In the context of Philippine law and cases, "Plagiarism is a concept more understood in academic circles as an offense against academic integrity anathema to the strict standards of originality of scholarly works which members of the academic community subscribe to.” The Supreme Court has also described Plagiarism as the "deliberate and knowing 
+                            presentation of another person's original ideas or creative expressions as one's own".</p>
+                    </div>
+                    <img src="plagiarism.png" alt="Plagiarism">
+                </div>
+                    <br>
+                    <br>
+                    <hr>
+                <div class="section-content">
+                    <div class="text">
+                        <h1>EDITORIAL: On plagiarism</h1>
+                        <h2>NASA Astrophysics Data System (ADS)</h2>
+                        <h2>Harris, Simon; Webb, Steve; Hendee, William R.</h2>
+                        <h3>2008-03-01</h3>
+                        <p>The case where plagiarism is admitted shall be instituted. A retraction will be published in PMB, and the authors banned from publishing in PMB for a number of years. Further, in the most serious cases the Publisher will report the plagiarism to the guilty parties' employer, and/or professional organization. If the investigation rules against the accusation of plagiarism, a letter stating this ruling shall be provided to the accuser, the authors accused of plagiarism, the authors of the original work, and the copyright holder. In either case, these actions should constitute closure of the allegation of plagiarism. An allegation of plagiarism is a very serious accusation, and should never be made lightly. On the other hand, self-policing is a major strength of the scientific community, and plagiarism should always be reported when it is suspected to have occurred. PMB reserves the right to amend the above 
+                            detailed procedures should the practice of plagiarism worryingly become less rare than it is today.</p>
+                    </div>
+                    <img src="plagiarism2.png" alt="Plagiarism" class="image">
+                </div>
+                    
+
+            `,
+            blog: `
+                <div class="section-content">
+                    <img src="virus.jpg" alt="Viruses">
+                    <div class="text">
+                        <h1>Viruses in the Digital Age</h1>
+                        <p>A computer virus is a type of malware that, when executed, replicates itself by modifying other computer programs and inserting its own code into those programs. If this replication succeeds, the affected areas are then said to be "infected" with a computer virus,
+                            a metaphor derived from biological viruses.</p>
+                    </div>
+
+
+                </div>
+                    <br>
+                    <br>
+                    <hr>
+
+                <div class="section-content">
+                    <img src="malware.jpg" alt="Malware">
+                    <div class="text">
+                        <h1>Malware</h1>
+                        <p>Malware, short for malicious software, refers to any intrusive software developed by cybercriminals (often called hackers) to steal data and damage or destroy computers and computer systems. Examples of common malware include viruses, worms,
+                            Trojan viruses, spyware, adware, and ransomware.</p>
+                    </div>
+                </div>
+                    <br>
+                    <br>
+                    <hr>
+
+                <div class="section-content">
+                    <img src="spam.jpg" alt="Spam">
+                    <div class="text">
+                        <h1>Spam</h1>
+                        <p>Spam, in the context of cybersecurity, refers to any unsolicited and often irrelevant or inappropriate messages sent over the internet, typically to a large number of users, primarily for
+                            advertising, phishing, spreading malware, or other similar purposes.</p>
+                    </div>
+                </div>
+                    <br>
+                    <br>
+                    <hr>
+                <div class="section-content">
+                    <img src="antivirus.jpg" alt="AntiVirus">
+                    <div class="text">
+                        <h1>AntiVirus</h1>
+                        <p>Antivirus is cybersecurity software that detects and removes malicious software (malware) from a computer, device, or network. 
+                            If your network has end users, antivirus software is essential in the prevention of data breaches.</p>
+                    </div>
+                </div>
+            `,
+            form: `
+                <div class="form-container">
+                    <h1>Form</h1>
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
+
+                        <label for="firstname">Firstname:</label>
+                        <input type="firstname" id="firstname" name="firstname" required placeholder="Enter your firstname"><br><br>
+
+                        <label for="lastname">Lastname:</label>
+                        <input type="lastname" id="lastname" name="lastname" required placeholder="Enter your lastname"><br><br>
+
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required placeholder="Enter your age" min="1" max="120"><br><br>
+
+                        <label for="birthdate">Birthdate:</label>
+                        <input type="date" id="birthdate" name="birthdate" required placeholder="Select your birthdate"><br><br>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            `
+        };
+
+        function loadContent(page) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = pages[page] || '<h1>Page Not Found</h1>';
+        }
+    </script>
+</body>
+</html>
